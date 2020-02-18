@@ -294,6 +294,8 @@ cdef class ConvertOptions:
     column_types: dict, optional
         Map column names to column types
         (disabling type inference on those columns).
+        A pyarrow.Schema object may also be supplied and will be converted
+        to a corresponding mapping from column names to column types.
     null_values: list, optional
         A sequence of strings that denote nulls in the data
         (defaults are appropriate in most cases).
